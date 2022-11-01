@@ -4,36 +4,33 @@
              x:Class="Lab6Starter.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <VerticalStackLayout>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <Label x:Name="XScoreLBL" Text="X's Score: 0"   VerticalOptions="Center" FontSize="24"/>
+            <Label x:Name="OScoreLBL" Text="Y's Score: 0"  VerticalOptions="Center" FontSize="24"/>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+            <Grid Background="Chartreuse" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button HeightRequest = "100" WidthRequest="100" BackgroundColor="Orange" Grid.Row="0" Grid.Column="0" x:Name="Tile00" Text="XXXXX" HorizontalOptions="Center"  VerticalOptions="Center"  Clicked="HandleButtonClick" FontSize="24"/>
+                <Button HeightRequest = "100" WidthRequest="100"  BackgroundColor="Yellow" Grid.Row="0" Grid.Column="1" x:Name="Tile01" Text="" HorizontalOptions="Center"  VerticalOptions="Center" Clicked="HandleButtonClick" FontSize="24"/>
+                <Button HeightRequest = "100" WidthRequest="100"  BackgroundColor="Green" Grid.Row="0" Grid.Column="2" x:Name="Tile02" Text="" HorizontalOptions="Center"  VerticalOptions="Center" Clicked="HandleButtonClick" FontSize="24"/>
+                <Button HeightRequest = "100" WidthRequest="100" BackgroundColor="Blue" Grid.Row="1" Grid.Column="0" x:Name="Tile10" Text="" HorizontalOptions="Center"  VerticalOptions="Center"  Clicked="HandleButtonClick" FontSize="24"/>
+                <Button HeightRequest = "100" WidthRequest="100" BackgroundColor="Violet" Grid.Row="1" Grid.Column="1" x:Name="Tile11" Text="" HorizontalOptions="Center"  VerticalOptions="Center"  Clicked="HandleButtonClick" FontSize="24"/>
+                <Button HeightRequest = "100" WidthRequest="100" BackgroundColor="Red" Grid.Row="1" Grid.Column="2" x:Name="Tile12" Text="" HorizontalOptions="Center"  VerticalOptions="Center" Clicked="HandleButtonClick" FontSize="24"/>
+                <Button HeightRequest = "100" WidthRequest="100" BackgroundColor="Orange" Grid.Row="2" Grid.Column="0" x:Name="Tile20" Text="" HorizontalOptions="Center"  VerticalOptions="Center"  Clicked="HandleButtonClick" FontSize="24"/>
+                <Button HeightRequest = "100" WidthRequest="100" BackgroundColor="Yellow" Grid.Row="2" Grid.Column="1" x:Name="Tile21" Text="" HorizontalOptions="Center" VerticalOptions="Center"  Clicked="HandleButtonClick" FontSize="24"/>
+                <Button HeightRequest = "100" WidthRequest="100" BackgroundColor="Green" Grid.Row="2" Grid.Column="2" x:Name="Tile22" Text="" HorizontalOptions="Center"  VerticalOptions="Center" Clicked="HandleButtonClick" FontSize="24"/>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>
