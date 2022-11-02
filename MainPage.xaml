@@ -31,7 +31,10 @@
                 <Button HeightRequest = "100" WidthRequest="100" BackgroundColor="Green" Grid.Row="2" Grid.Column="2" x:Name="Tile22" Text="" HorizontalOptions="Center"  VerticalOptions="Center" Clicked="HandleButtonClick" FontSize="24"/>
 
             </Grid>
-
+            
+            <Button HeightRequest = "50" WidthRequest="150" BackgroundColor="Black" Grid.Row="3" Grid.Column="2" x:Name="Reset" Text="Reset" HorizontalOptions="Center"  VerticalOptions="Center" Clicked="ResetButton" FontSize="24" />
+            
+            
         </VerticalStackLayout>
     </ScrollView>
 
