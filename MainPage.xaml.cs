@@ -1,11 +1,11 @@
 ﻿namespace Lab6Starter;
 /**
  * 
- * Name: 
- * Date: How about this?
- * Description:
+ * Name: Xee Lo, Woo Sik Choi
+ * Date: 11/7/2022
+ * Description: Lab 6 Part 2
  * Bugs:
- * Reflection:
+ * Reflection: Choi was having problems with connecting to Git Lab so we pushed all changes in my repo and worked on mine only. 
  * 
  */
 
@@ -97,6 +97,7 @@ public partial class MainPage : ContentPage
     private void CelebrateVictory(Player victor)
     {
         //MessageBox.Show(Application.Current.MainWindow, String.Format("Congratulations, {0}, you're the big winner today", victor.ToString()));
+        DisplayAlert("Congratulations", $"{victor}, you're the big winner today", "Done");
         XScoreLBL.Text = String.Format("X's Score: {0}", ticTacToe.XScore);
         OScoreLBL.Text = String.Format("O's Score: {0}", ticTacToe.OScore);
 
@@ -108,6 +109,7 @@ public partial class MainPage : ContentPage
     /// </summary>
     private void ResetGame()
     {
+        ticTacToe.ResetGame();
         Tile00.Text = "";
         Tile01.Text = "";
         Tile02.Text = "";

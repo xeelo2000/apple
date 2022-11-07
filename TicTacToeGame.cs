@@ -98,6 +98,13 @@ internal class TicTacToeGame
         {
             ToggleCurrentPlayer();
             return false;
+        }else if (victor == Player.O)
+        {
+            scores[(int)Player.O]++;
+        }
+        else if(victor == Player.X)
+        {
+            scores[(int)Player.X]++;
         }
         return true;
     }
